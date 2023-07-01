@@ -12,5 +12,5 @@ data class Groceries(
     val id: Int = 0,
     val name: String,
     val address: String,
-    val numberphone: Int
+    val number: String
 ) : Parcelable

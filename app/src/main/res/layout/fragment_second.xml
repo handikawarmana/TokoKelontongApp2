@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".ui.SecondFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/namaEditText"
+            android:id="@+id/nameEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -37,12 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Alamat"
-            app:layout_constraintEnd_toEndOf="@+id/namaEditText"
-            app:layout_constraintStart_toStartOf="@+id/namaEditText"
-            app:layout_constraintTop_toBottomOf="@+id/namaEditText" />
+            app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+            app:layout_constraintStart_toStartOf="@+id/nameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
 
         <EditText
-            android:id="@+id/alamatEditText"
+            android:id="@+id/addressEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -57,12 +57,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="No.HP"
-            app:layout_constraintEnd_toEndOf="@+id/alamatEditText"
-            app:layout_constraintStart_toStartOf="@+id/alamatEditText"
-            app:layout_constraintTop_toBottomOf="@+id/alamatEditText" />
+            app:layout_constraintEnd_toEndOf="@+id/addressEditText"
+            app:layout_constraintStart_toStartOf="@+id/addressEditText"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditText" />
 
         <EditText
-            android:id="@+id/nomorhpEditText"
+            android:id="@+id/numberEditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -71,16 +71,36 @@
             app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-        <Button
-            android:id="@+id/saveButon"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/save"
+            android:layout_marginTop="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/nomorhpEditText"
+            app:layout_constraintEnd_toEndOf="@+id/numberEditText"
             app:layout_constraintHorizontal_bias="0.986"
-            app:layout_constraintStart_toStartOf="@+id/nomorhpEditText"
-            app:layout_constraintTop_toBottomOf="@+id/nomorhpEditText" />
+            app:layout_constraintStart_toStartOf="@+id/numberEditText"
+            app:layout_constraintTop_toBottomOf="@+id/numberEditText">
+
+            <Button
+                android:id="@+id/deleteButon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone"
+                android:text="Hapus" />
+
+            <Button
+                android:id="@+id/saveButon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="@string/save" />
+
+
+        </LinearLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
