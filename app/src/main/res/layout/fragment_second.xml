@@ -71,6 +71,16 @@
             app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            app:layout_constraintEnd_toEndOf="@+id/numberEditText"
+            app:layout_constraintStart_toStartOf="@+id/numberEditText"
+            app:layout_constraintTop_toBottomOf="@id/numberEditText" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="@+id/numberEditText"
             app:layout_constraintHorizontal_bias="0.986"
             app:layout_constraintStart_toStartOf="@+id/numberEditText"
-            app:layout_constraintTop_toBottomOf="@+id/numberEditText">
+            app:layout_constraintTop_toBottomOf="@+id/map">
 
             <Button
                 android:id="@+id/deleteButon"
